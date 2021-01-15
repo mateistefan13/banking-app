@@ -3,10 +3,10 @@ package com.bankingproject.controller;
 import com.bankingproject.service.AccountService;
 import com.bankingproject.service.ClientService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import org.springframework.web.bind.annotation.RestController;
 
-@Component
-public class PersoanaFizicaController extends UserController {
+@RestController
+public class PersoanaFizicaController {
 
     private AccountService accountService;
     private ClientService clientService;
@@ -14,7 +14,7 @@ public class PersoanaFizicaController extends UserController {
     @Autowired
     public PersoanaFizicaController(AccountService accountService, ClientService clientService) {
 
-        super(accountService, clientService);
+
         this.accountService = accountService;
     }
 }
